@@ -6,3 +6,25 @@
     scroll-behavior: smooth;
     transition: all 0.2s;
 }
+
+::selection {
+    color: #121212;
+    background-color: #FFFFFF;
+}
+
+::-webkit-scrollbar {
+    width: 2px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #121212;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: yellow;
+    border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: gold;
+}

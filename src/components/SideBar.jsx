@@ -1,13 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { FaPodcast } from "react-icons/fa6";
 import { AiFillHome, AiOutlineSearch, AiFillHeart } from "react-icons/ai";
 import { IoMdCloudUpload, IoMdLogIn } from "react-icons/io";
 import Theme from "../utils/Theme";
 
-const SideBar = () => {
+const SideBar = ({ menu }) => {
   return (
-    <div className="w-56 z-50 bg-lsecondary/90 dark:bg-dsecondary/90 h-full py-4 place-items-center fixed flex flex-col">
+    <div
+      className={`w-52 ${
+        menu === true ? "flex" : "hidden"
+      } z-50 bg-lsecondary dark:bg-dsecondary h-full py-4 place-items-center fixed flex-col`}
+    >
       <NavLink to={"/"} className="flex place-items-center gap-2">
         <FaPodcast className="text-yellow-500" size={30} />
         <span className="text-2xl font-bold uppercase text-yellow-500">

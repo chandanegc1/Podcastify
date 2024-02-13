@@ -6,7 +6,7 @@ const PodcastCard = () => {
   return (
     <NavLink
       to={"/"}
-      className="flex overflow-hidden rounded-lg w-3/12 h-80 transform duration-300 hover:-translate-y-3 p-4 bg-lsecondary text-ltext dark:text-dtext dark:bg-dsecondary hover:saturate-200"
+      className="flex overflow-hidden rounded-lg w-[23%] h-96 transform duration-300 hover:-translate-y-3 p-4 bg-lsecondary text-ltext dark:text-dtext dark:bg-dsecondary hover:saturate-200"
     >
       <div className="flex flex-col gap-4 relative">
         <NavLink to={"/favourites"} className="z-40 absolute right-0">
