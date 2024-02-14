@@ -1,23 +1,32 @@
-import React, { useState } from "react";
+import React from "react";
 import { NavLink } from "react-router-dom";
 import { FaPodcast } from "react-icons/fa6";
 import { AiFillHome, AiOutlineSearch, AiFillHeart } from "react-icons/ai";
 import { IoMdCloudUpload, IoMdLogIn } from "react-icons/io";
+import { RxCross1 } from "react-icons/rx";
 import Theme from "../utils/Theme";
 
-const SideBar = ({ menu }) => {
+const SideBar = ({ menu, setMenu }) => {
   return (
     <div
       className={`w-52 ${
-        menu === true ? "flex" : "hidden"
-      } z-50 bg-lsecondary dark:bg-dsecondary h-full py-4 place-items-center fixed flex-col`}
+        menu ? "opacity-100" : "opacity-0 pointer-events-none"
+      } z-[100] bg-lsecondary duration-200 transition-opacity ease-in-out dark:bg-dsecondary h-full py-4 place-items-center fixed flex-col`}
     >
-      <NavLink to={"/"} className="flex place-items-center gap-2">
-        <FaPodcast className="text-yellow-500" size={30} />
-        <span className="text-2xl font-bold uppercase text-yellow-500">
-          Podcastify
-        </span>
-      </NavLink>
+      <div className="px-3 flex justify-between w-full">
+        <NavLink to={"/"} className="flex place-items-center gap-2 ">
+          <FaPodcast className="text-yellow-500" size={30} />
+          <span className="md:text-2xl font-bold uppercase text-yellow-500">
+            Podcastify
+          </span>
+        </NavLink>
+        <button
+          className="text-ltext dark:text-dtext md:hidden"
+          onClick={() => setMenu(!menu)}
+        >
+          <RxCross1 size={25} />
+        </button>
+      </div>
       <div className="mt-6 text-ltext dark:text-dtext flex flex-col w-full">
         <NavLink
           to={"/"}

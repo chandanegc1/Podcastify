@@ -5,7 +5,7 @@ const Navbar = ({ setMenu, menu }) => {
   return (
     <div
       className={`${
-        menu === true ? "lg:w-[85%]" : "w-full"
+        menu === true ? "lg:w-[85%] w-full" : "w-full"
       } h-16 shadow-lg shadow-yellow-400/60 fixed text-ltext dark:text-dtext flex justify-between place-items-center py-4 px-10 bg-lsecondary dark:bg-dprimary z-50`}
     >
       <button onClick={() => setMenu(!menu)}>

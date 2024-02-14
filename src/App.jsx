@@ -11,7 +11,7 @@ function App() {
 
   return (
     <Router>
-      <SideBar menu={menu} />
+      <SideBar menu={menu} setMenu={setMenu} />
       <div className={`${menu === true ? "lg:pl-52" : "w-full"} h-16`}>
         <Navbar setMenu={setMenu} menu={menu} />
       </div>
