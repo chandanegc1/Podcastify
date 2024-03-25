@@ -10,7 +10,7 @@ const Search = () => {
           <IoSearchSharp size={30} />
           <input
             type="search"
-            className="bg-transparent outline-none"
+            className="bg-transparent outline-none w-full"
             placeholder="Search Artist/Podcast"
           />
         </aside>

@@ -1,11 +1,12 @@
-import React from "react";
+import { BackgroundBoxesDemo } from "../components/BackgroundBoxesDemo";
 import MostPopular from "./MostPopular";
 
 const Dashboard = () => {
   return (
-    <div className="w-full min-h-screen bg-lprimary dark:bg-dprimary flex">
-      <div className="w-full h-full bg-black">
+    <div className="w-full min-h-screen  flex">
+      <div className="w-full h-full bg-lprimary dark:bg-dprimary">
         <MostPopular />
+        <BackgroundBoxesDemo />
       </div>
     </div>
   );
